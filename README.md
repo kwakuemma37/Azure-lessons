@@ -25,4 +25,17 @@
              - Operating systems
              - network controls
              - applications
-             - identity and infrastructe
+             - identity and infrastructre
+### Define cloud models
+      Cloud models define deployment type of cloud resources.
+        Private cloud:
+           it is a cloud (delivering IT Services over the internet) used by a single entity. 
+           pros:
+             Greater control for the company and IT department
+           cons:
+             Greater cost and fewer of the benefits of a public cloud deployment.
+           It may be hosted by from your on site datacenter. It may also be hosted in a dedicated datacenter offsite, potentially even by a a third party that has dedicated that datacenter to your company.
+           
+             
+         
+        
