@@ -43,8 +43,8 @@
              Anyone can purchase the cloud services and access and use resources.
              NB: The public availability is a key difference between public and private clouds
          - Hybrid cloud
-             Computing environment that takes that uses both private and public clouds in an inter-connected environment. 
-             Hybrid cloud can be used by and entity when it needs to serve the need of an increased, temporary demand by deploying public cloud resources. 
+             Computing environment that  uses both private and public clouds in an inter-connected environment. 
+             Hybrid cloud can be used by an entity when it needs to serve the need of an increased, temporary demand by deploying public cloud resources. 
              It can provide extra layer of security. eg. users can determine which service to keep in public and which to deploy in their private cloud infrastructure. 
          -  Multi-cloud: 
               Here, more that one cloud provider is used. this enables one to choose and use features from different cloud providers. 
@@ -57,7 +57,7 @@
       If an entity already uses VMware in a private cloud environment but wants to migrate to a public or hybrid cloud, Azure VMware solution let that entity run it's VMware workload in Azure with seamless integration and scalability.
 ### Describe the consumption-based model:
       In cloud computing there're 2 types of expenses to consider. Capital expenditure (CapEx) and Operational expenditure (OpEx).
-        - Capital expenditure (CapEx) are the initial expenses neede to purchase or secure tangible resources. eg. building, vehicles, datacenter.
+        - Capital expenditure (CapEx) are the initial expenses needed to purchase or secure tangible resources. eg. building, vehicles, datacenter.
         - Operational expenditure are that expenses incurred on using services or products over time. Renting a convention center, leasing a company vehicle, or signing for cloud services. 
       Cloud computing falls under OpEx because it is based on consumption-based model. You only pay for what you use. You don't pay for the physical infrastracture, electricity, or anything associated with maintaining the datacenter. You don't pay for what you don't use.
       This consumption model has manay benefits, including
@@ -67,7 +67,7 @@
         - The ability to stop paying for resources that are no longer needed.
     When you try to estimate future resource demands in a traditional datacenter, you may eighter underestimate or overestimate. 
       Overestimating will cost an entity to spend more than necessary on unused or under-used resources. 
-      Understimating may cause deprivation of resources when needed and can take longer time to upgrade due to delay often arose in procurement procedures.
+      Understimating may cause deprivation of resources when needed and can take longer time to upgrade due to delay often arose from procurement procedures.
       In a cloud environment you do not have to worry about estimation. You add resources when needed and remove when not. You don't not pay for the extra capacity that the cloud provider and provide.
 ### Compare cloud pricing models
       Cloud computing uses pay-as-you-go pricing model. You typically pay for the cloud services you use which helps you:
