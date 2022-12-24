@@ -43,7 +43,15 @@
              Computing environment that takes that uses both private and public clouds in an inter-connected environment. 
              Hybrid cloud can be used by and entity when it needs to serve the need of an increased, temporary demand by deploying public cloud resources. 
              It can provide extra layer of security. eg. users can determine which service to keep in public and which to deploy in their private cloud infrastructure. 
-             
+         -  Multi-cloud: 
+              Here, more that one cloud provider is used. this enables one to choose and use features from different cloud providers. 
+              It is also used when one is in the process of migrating to a different provider from a previous one.
+              In a multi-cloud environment you use one or more cloud providers and manage resources and security in both environments.
+### Azure Arc:
+      A set of technologies that enables one to manage your cloud environment. 
+      It can be used manage a public cloud whether a solely Azure, private in your datacenter, a hybrid configuration, or even a multi-cloud environment running on multiple cloud providers at once.
+### Azure VMware solution: 
+      If an entity already uses VMware in a private cloud environment but wants to migrate to a public or hybrid cloud, Azure VMware solution let that entity run it's VMware workload in Azure with seamless integration and scalability.
              
          
         
