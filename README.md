@@ -28,14 +28,22 @@
              - identity and infrastructre
 ### Define cloud models
       Cloud models define deployment type of cloud resources.
-        Private cloud:
+        - Private cloud:
            it is a cloud (delivering IT Services over the internet) used by a single entity. 
            pros:
              Greater control for the company and IT department
            cons:
              Greater cost and fewer of the benefits of a public cloud deployment.
            It may be hosted by from your on site datacenter. It may also be hosted in a dedicated datacenter offsite, potentially even by a a third party that has dedicated that datacenter to your company.
-           
+         - Public cloud
+             The cloud provider builds, controls and maintains the cloud.
+             Anyone can purchase the cloud services and access and use resources.
+             NB: The public availability is a key difference between public and private clouds
+         - Hybrid cloud
+             Computing environment that takes that uses both private and public clouds in an inter-connected environment. 
+             Hybrid cloud can be used by and entity when it needs to serve the need of an increased, temporary demand by deploying public cloud resources. 
+             It can provide extra layer of security. eg. users can determine which service to keep in public and which to deploy in their private cloud infrastructure. 
+             
              
          
         
