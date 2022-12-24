@@ -52,6 +52,27 @@
       It can be used manage a public cloud whether a solely Azure, private in your datacenter, a hybrid configuration, or even a multi-cloud environment running on multiple cloud providers at once.
 ### Azure VMware solution: 
       If an entity already uses VMware in a private cloud environment but wants to migrate to a public or hybrid cloud, Azure VMware solution let that entity run it's VMware workload in Azure with seamless integration and scalability.
-             
-         
+### Describe the consumption-based model:
+      In cloud computing there're 2 types of expenses to consider. Capital expenditure (CapEx) and Operational expenditure (OpEx).
+        - Capital expenditure (CapEx) are the initial expenses neede to purchase or secure tangible resources. eg. building, vehicles, datacenter.
+        - Operational expenditure are that expenses incurred on using services or products over time. Renting a convention center, leasing a company vehicle, or signing for cloud services. 
+      Cloud computing falls under OpEx because it is based on consumption-based model. You only pay for what you use. You don't pay for the physical infrastracture, electricity, or anything associated with maintaining the datacenter. You don't pay for what you don't use.
+      This consumption model has manay benefits, including
+        - No upfront costs
+        - No need to purchase and manage costly infrastructure that users might not use to its fullest potential.
+        - The ability to pay for more resources when they're needed.
+        - The ability to stop paying for resources that are no longer needed.
+    When you try to estimate future resource demands in a traditional datacenter, you may eighter underestimate or overestimate. 
+      Overestimating will cost an entity to spend more than necessary on unused or under-used resources. 
+      Understimating may cause deprivation of resources when needed and can take longer time to upgrade due to delay often arose in procurement procedures.
+      In a cloud environment you do not have to worry about estimation. You add resources when needed and remove when not. You don't not pay for the extra capacity that the cloud provider and provide.
+### Compare cloud pricing models
+      Cloud computing uses pay-as-you-go pricing model. You typically pay for the cloud services you use which helps you:
+        - Plan and manage you operating costs
+        - Run your infrasture more efficiently.
+        - Scale as your business needs change.
+      In order words, cloud computing is a way to rent compute power and storage from someone else's datacenter.  You can treat cloud resources as you would in your own datacenter. In cloud computing, when you're done with the resources you used, you give them back. You're billed only for what you used, which may not happen in the datacenter you own.
+      You rent and use CPUs and storage for the time you need them instead of maintaining them in your datacenter. The cloud provider takes care of maintaining the underlying infrastracture for you.
+      
+      
         
