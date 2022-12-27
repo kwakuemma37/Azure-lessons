@@ -77,5 +77,10 @@
       In order words, cloud computing is a way to rent compute power and storage from someone else's datacenter.  You can treat cloud resources as you would in your own datacenter. In cloud computing, when you're done with the resources you used, you give them back. You're billed only for what you used, which may not happen in the datacenter you own.
       You rent and use CPUs and storage for the time you need them instead of maintaining them in your datacenter. The cloud provider takes care of maintaining the underlying infrastracture for you.
       
+ # Describe the benefits of using cloud services
+     The 2 most biggest considerations when build or deploying cloud applications are uptime(availability) and the ability to handle demand (Scale)
+     ## High availability
+     
+ 
       
         
