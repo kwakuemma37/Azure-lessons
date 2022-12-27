@@ -80,7 +80,15 @@
 # Describe the benefits of using cloud services
      The 2 most biggest considerations when build or deploying cloud applications are uptime(availability) and the ability to handle demand (Scale)
   ### High availability
-       dfasda
+       High availability focuses on ensuring maximum availability, regardless of disruptions or events that may occur.
+       When architecting for cloud solutions, it is important to account for service availability quarantess.
+       Azure is a highly available cloud environment with uptime guarantess depending on the service which are part of the service level aggreements (SLAs)
+       - A service with 99% availability means that service can be unavailable only for 1.68 hours a week or 7.2 hours per month
+       - A service with 99.9% availability means that service can be unavailable only for 10 minutes a week or 43.2 minutes per month
+       100% availability is extremely difficult and expensive to achieve because it does not permit a service to be taken down for required maintenance and 
+       upgrages. It requires the service to be redaundant and also requires the backup components to immediately kick-in with zero interference to the customer.
+  ### Scalability
+        Scalability is ou
      
  
       
