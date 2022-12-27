@@ -49,7 +49,7 @@
          -  Multi-cloud: 
               Here, more that one cloud provider is used. this enables one to choose and use features from different cloud providers. 
               It is also used when one is in the process of migrating to a different provider from a previous one.
-              In a multi-cloud environment you use one or more cloud providers and manage resources and security in both environments.
+              In a multi-cloud environment you use two or more cloud providers and manage resources and security in both environments.
 ### Azure Arc:
       A set of technologies that enables one to manage your cloud environment. 
       It can be used manage a public cloud whether a solely Azure, private in your datacenter, a hybrid configuration, or even a multi-cloud environment running on multiple cloud providers at once.
