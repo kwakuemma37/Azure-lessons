@@ -88,7 +88,17 @@
        100% availability is extremely difficult and expensive to achieve because it does not permit a service to be taken down for required maintenance and 
        upgrages. It requires the service to be redaundant and also requires the backup components to immediately kick-in with zero interference to the customer.
   ### Scalability
-        Scalability is ou
+        Scalability is one of the major benefits of cloud computing. 
+        It refers to the ability to adjust resources to meet demand. If a service experiences sudden peak traffic and the system is overwhelmed, the ability to scale means you can add more resources to better handle the increased demand.
+        Scalability also helps to avoid overpaying resources because you can remove resources that are no longer needed. 
+        There're 2 varieties of scaling: Vertical and horizontal scaling
+  #### Vertical scaling
+         With vertical scaling you increase or decrease resources capabilities as and when they're needed.
+         If an app needed more power or memory, you can scale up by increasing CPUs capabilities or RAM size to the virtual machine. You can also scale down by reducing the   CPUs or RAM size that are too much for the app.
+  #### Horizontal scaling
+         With horizontal scaling you add more resources (scale out) when needed and remove resources that are not needed (scale in). 
+         You scale out by adding resource eg. adding another virtual machine or running multiple instances of the services.
+         
      
  
       
