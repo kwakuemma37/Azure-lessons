@@ -79,7 +79,8 @@
       
 # Describe the benefits of using cloud services
      The 2 most biggest considerations when build or deploying cloud applications are uptime(availability) and the ability to handle demand (Scale)
-  ## High availability
+  ### High availability
+       dfasda
      
  
       
