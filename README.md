@@ -119,7 +119,34 @@
             analytics to find patterns and trends tha help better plan resource deployments.
             YOu can predict future costs and adjust your resources as needed by using cloud analytics and information.
             Total cost of Ownership (TCO0 or pricing calculator get help get an estimate of potential cloud spend.
-            
+### Describe the benefits of security and governance in the cloud
+      Whether you're deploy and IaaS or SaaS, cloud features support governance and compliance.
+      Set templates helps to ensure that all deployed resources meet corporate standards or government regulatory requirements.
+      You can also update all deployed resources to new standards as standards change.
+      Cloud-based auditing helps flag resources that do not meet standards or are out of compliance and provides migration strategies.
+      Depending on the operating model, software udpates and patches can be applied automatically, which helps with both governance and security.
+      - If you want maximum control IaaS provides you with physical resources but lets you manage operating system and installed software, including patches and updates
+      - If you want patches and maintenance taken care of automatically then you should opt for SaaS.
+      - Cloud provider are best suited to handle things like DDoS attacks, making your network more robust and secure because cloud is the delivery of IT resources over the internet.
+      
+### Describe the benefits of manageability in the cloud
+      A major benefit of cloud computing is the manageability options. There're 2 types of cloud manageability - Management of the cloud and management in  the cloud.
+#### Management of the cloud
+       Management of the cloud is about managing your cloud resources. In the cloud, you can:
+       - Automatically scale resources based on need.
+       - Deploy resources based on preconfigured template, removing the need for manual configuraiton.
+       - Monitor health of resources and automatically replace failing resources.
+       - Receive auatomatic alerts based on configured metrics, so you're aware of performance in real time.
+#### Management in the cloud.
+        Management in the cloud is about how you're able to manage your cloud environment and resources. 
+        It's about the channels that you can use to manage the cloud and the resources
+          YOu can manage the cloud:
+            - Through a web portal
+            - Using command line interface (CLI)
+            - using APIs
+            - using PowerShell.
+#### Manage of the cloud
+      
  
       
         
