@@ -78,10 +78,10 @@
       You rent and use CPUs and storage for the time you need them instead of maintaining them in your datacenter. The cloud provider takes care of maintaining the underlying infrastracture for you.
       
 # Describe the benefits of using cloud services
-     The 2 most biggest considerations when build or deploying cloud applications are uptime(availability) and the ability to handle demand (Scale)
+     The 2 most biggest considerations when building or deploying cloud applications are uptime(availability) and the ability to handle demand (Scale)
   ### High availability
        High availability focuses on ensuring maximum availability, regardless of disruptions or events that may occur.
-       When architecting for cloud solutions, it is important to account for service availability quarantess.
+       When architecting for cloud solutions, it is important to account for service availability quarantees.
        Azure is a highly available cloud environment with uptime guarantess depending on the service which are part of the service level aggreements (SLAs)
        - A service with 99% availability means that service can be unavailable only for 1.68 hours a week or 7.2 hours per month
        - A service with 99.9% availability means that service can be unavailable only for 10 minutes a week or 43.2 minutes per month
@@ -98,8 +98,28 @@
   #### Horizontal scaling
          With horizontal scaling you add more resources (scale out) when needed and remove resources that are not needed (scale in). 
          You scale out by adding resource eg. adding another virtual machine or running multiple instances of the services.
-         
-     
+### Describe the benefits of reliability and predictability in the cloud
+      Reliability and predictability are 2 crucial cloud benefits that help you develop solutions with confidence.
+   #### Reliability:
+          Reliability, which is one of the pillars of MZ Azure is the ability for a system to recover from failures and continue function.
+          The decentralized design of the cloud makes it naturally support a reliable and resilient infrastructure. 
+          With the decentralised design, the cloud makes it possible to deploy resources in different regions around the world. This design makes it possible for services to continue running even when there's catasrophic event as other regions are still up and running. 
+          We can desing applications to take advantage of this increased reliability. 
+          In some cases the cloud environment itself will automatically shift to a different reion, with no action needed on your part.
+   #### Predictability: 
+          Predictability lets you move forward with confidence because you can predict what the future will be in terms of cost and performance.
+          Performance predictability: 
+            This focuses on predicting the resources that are needed to deliver positive experience for your customers.
+            - Autoscaling, load balancing and high availability are some of the cloud concepts that support performance predictability.
+            - If you sudden need more resources, autoscaling can deploy additional resources to meet the demand, and then scale back when the demands drops.
+            - Load balancing can help redirect some of the load to other less stressed areas when traffic demand is heavy in one area.
+          Cost predictability:
+            Cost predictability focuses to predicting or forecasting cloud spend.
+            With the cloud we can monitory resources usage in real-time and ensure that we're using them in the most efficient way, and apply data
+            analytics to find patterns and trends tha help better plan resource deployments.
+            YOu can predict future costs and adjust your resources as needed by using cloud analytics and information.
+            Total cost of Ownership (TCO0 or pricing calculator get help get an estimate of potential cloud spend.
+            
  
       
         
