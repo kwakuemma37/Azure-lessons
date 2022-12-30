@@ -161,8 +161,24 @@
         on your configuration, the cloud provider may be responsible for network setting and connectivity within your cloud environment.
    ##### Scenarios.
            Common scenarios where PaaS is suited.
-             - Development Framework: PaaS providers development framework the developers can build upon or customize cloud basez-applications
-     
+             - Development Framework: PaaS providers development framework the developers can build upon or customize cloud based-applications
+                                      PaaS lets developer create applications using built-in software components. 
+                                      Cloud features such as scalability, high availability, multitenancy are included, reducing the amount of coding developers
+                                      have to do.
+             - Analytics or business intelligence: Tools included in PaaS enables organisations to analyze and  mine their data, finding insight and patterns and 
+                                                   predicting outcomes to improve forecasting, product design, decision making, investment returns.
+### Sofware as a Service  (SaaS).
+      In a product perspective SaaS is the complete cloud service. With SaaS you're renting a fully developed application and you do not worry about infrastural and 
+      platform concerns. Eg of SaaS. email, finance applications etc.
+      SaaS is the cloud service with the lowest level of flexibility but also the easiest to get up and running. It require least techinical knowledge to employ. 
+  #### shared responsibilites:
+       Cloud provider: Manages physical infrastrue, operating system, power, security, updates, patches and etc.
+       User: manages user accounts, database, devices that can connect and mainly data.
+  #### Scenarios:
+         - Email messaging,
+         - Business productivity applications,
+         - Finance and expense tracking.
+      
       
  
       
