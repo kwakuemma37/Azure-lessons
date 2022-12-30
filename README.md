@@ -153,7 +153,16 @@
  #### Scenarios suited for IaaS
         Lift-and-ship: When migrating from on-prem datacenter to cloud and simply want to move what are running on-prem to running on cloud infrastructure.
         Test and Development environment : You have established configuration  test and development environments and you rapidly want to replicate. 
-      
+ ### Platform as a service (IasS)
+     PaaS is between IaaS and SaaS. It is mostly suited for development without the headache of maintaining infrastructure. The cloud provider maintains the physical infrastructure and connections, operating system, database, updates and patches and development tools.
+     In PaaS you don't have to worry about software licence and operating system patches.
+ #### Shared responsibility model
+        PaaS splits the responsibility between you and the cloud provider. The provider maintains the physical resources like hardware and connections. Depending 
+        on your configuration, the cloud provider may be responsible for network setting and connectivity within your cloud environment.
+   ##### Scenarios.
+           Common scenarios where PaaS is suited.
+             - Development Framework: PaaS providers development framework the developers can build upon or customize cloud basez-applications
+     
       
  
       
