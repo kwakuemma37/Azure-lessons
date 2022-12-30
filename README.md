@@ -145,7 +145,15 @@
             - Using command line interface (CLI)
             - using APIs
             - using PowerShell.
-#### Manage of the cloud
+##  Describe cloud service types 
+### Infrastructure as a Service (IaaS)
+      Infrastructure as a service is the cloud type that provides maximum control. It is like you're renting the physical resources and whatever you do with those resources is up to you. 
+      It is your responsibility to install operating sytems, databases, configuration etc., updates and software patches. 
+      The cloud provider's responsibility is to maintain the physical hardware and internet connectivity.
+ #### Scenarios suited for IaaS
+        Lift-and-ship: When migrating from on-prem datacenter to cloud and simply want to move what are running on-prem to running on cloud infrastructure.
+        Test and Development environment : You have established configuration  test and development environments and you rapidly want to replicate. 
+      
       
  
       
