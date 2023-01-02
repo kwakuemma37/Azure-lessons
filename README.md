@@ -184,6 +184,46 @@
  ## Describe Azure physical infrastructure
       The core architectural components of Azure may be broken down into 2 main groupings: the physical infrasctructure, and the management infrastrcuture.
  ### Physical infrasctructure
+       The physical infrastructure starts with datacenters. They/'re facilities with resources arranged in racks, with decicated power, cooling, and networking infrastructure.
+       Azure has datacenters around the world which are not directly accessible. Datacenters are grouped into Azure regions or Azure availability zones that are designed to achieve resiliency and reliability for business-critical workloads.
+ #### Regions.
+        A region is a geographical location the planet with one or more datacenters that are nearby and networked with low-latency network.
+        Azure intelligent assigns and controls the resources within each region to ensure that workloads are appropriately balanced.
+            NB: Some services or virtual machine (VM) features are only available in certain regions, such as VM sizes or storage types. 
+                There're also some global Azure services that don't requre you to select a particular region, such as Azure active directory, Azure traffic manager, Azure DNS
+#### Availability zones
+       Availability zones are physically separate datacenters within an Azure region with each having its own dedicated power, cooling, and networking. 
+       Each zone is setup to be an isolated boundary. If one zone goes down, other ones are not affected and continues to work.
+       Availability zones are connected through high-speed, private fibre-optic networks.
+            NB: To ensure resiliency, a minimum of 3 separate availability zones are present in all availability zone-enabled regions.
+                However, not all Azure Regions currently support availability zones.
+#### Use availability zones in your apps
+       - You want to ensure your services and data are redaundant so you can protect your information in case of failure.
+       - Azure can make your apps highly available through availability zones.
+       - You an use availability zones to run mission-critical applications and build high-availability into your application architecture by co-location your
+          compute, storage, networking, and data resources within an availability zone and replicating in other availability zones. NB: There may be cost in duplicating or transferring data between availability zones.
+       - Availability zones are primary for V<s, managed disks, load balancers, and SQL databases. 
+       - Azure services that support availability zones fall into 3 categories:
+          -- Zonal services: You pin resources to a specific zone (eg. VMs, managed disks, IP addresses).
+          -- Zonal-redaundant services: The platform replicates automatically across zones (eg. zone-redaundant storage, SQL database).
+          -- Non-regional services: Services are always available from Azure geographies and are resilient to zone-wide outages as well as region-wide outages.
+       It's possible that an event could be so large that it impacts multiple availability zones in a single region despite the addition resiliency that availability zones provide. 
+       To proved further resiliency Azure uses Region pairs.
+#### Region pairs:
+       Most Azure regions are paired with another in the same geographical area  at least 300 miles away. This allows for the replication of resources across a geography that helps reduce the likelihood of interrupgions because of events susch as power outages, civil unrest, explosions, physical network outages that affect an
+       entire region.
+       Services automatically failover to the other region in its region pair in case it is unavailable.
+         NB: Not all Azure services automatically replicate data or automatically fall back from a failed region to cross-replicate to another enabled region. 
+             These require the customer to configure recovery and replication for those service.
+       You can take advantage of the wide distance between regions in a pair to provide services that are resilient, reliable and data redaundant because these regions in the pair are connected directly and may be isolated from disasters.
+##### Additional advantages of region pairs:
+        - if an Azure extensive outages occurs, one of the regions in the pair is prioritized to make sure at least one is restored as quickly as possible for applications hosted in that region pair.
+        - To minimize the down-time in case of Azure updates, updates are planned and rolled out to paired regions, one region at a time.
+        - Data contines to reside within the same geography as its pair for tax and law-enforcement juridication purposes.
+        Important:
+          Most directions are paried in two directions, meaning thay are the backup for the region that provides a backup for them.
+             
        
+                
       
         
