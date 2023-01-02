@@ -180,6 +180,10 @@
          - Finance and expense tracking.
       
       
- 
+ # Azure Fundamentals: Describe Azure architecture and 
+ ## Describe Azure physical infrastructure
+      The core architectural components of Azure may be broken down into 2 main groupings: the physical infrasctructure, and the management infrastrcuture.
+ ### Physical infrasctructure
+       
       
         
