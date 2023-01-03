@@ -219,9 +219,10 @@
 ##### Additional advantages of region pairs:
         - if an Azure extensive outages occurs, one of the regions in the pair is prioritized to make sure at least one is restored as quickly as possible for applications hosted in that region pair.
         - To minimize the down-time in case of Azure updates, updates are planned and rolled out to paired regions, one region at a time.
-        - Data contines to reside within the same geography as its pair for tax and law-enforcement juridication purposes.
+        - Data continues to reside within the same geography as its pair for tax and law-enforcement juridication purposes.
         Important:
           Most directions are paried in two directions, meaning thay are the backup for the region that provides a backup for them.
+          However, some regions, such as West India and Brazil South, are paired in only one direction. In a one-direction pairing, the Primary region does not provide backup for its secondary region. So, even though West India’s secondary region is South India, South India does not rely on West India. West India's secondary region is South India, but South India's secondary region is Central India. Brazil South is unique because it's paired with a region outside of its geography. Brazil South's secondary region is South Central US. The secondary region of South Central US isn't Brazil South.
              
        
                 
