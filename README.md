@@ -229,7 +229,24 @@
       Azure soverign regions include: 
         - US DoD Central, US Gov Virginia, US Gov Iowa and more: These are regions and physical and logical network-isolated instances of Azure for US government and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
         - China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
+ # Describe Azure management infrastructure
+     The Azure managmeent infrastructure include Azure resources, resource groups, subscriptions and accounts.
+ ## Azure resources and resource groups
+      Resource is the basic building block of Azure. Anything you create, deploy, provision is a resource including VMs, database, apps etc.
+ ### Resource groups:
+       Resource groups are the grouping of resources in Azure. Resource groups and resources have a one-to-many relationship, meaning there can be many resources 
+       in a resource group but a resource and only be in a single group. 
+       Every resource requires to be in a resource group.
+       Resource group helps to manage resources easier ie. any action that is performed on the group effects all resources in that group. eg When you delete a
+       resource group, resources it are also deleted.
+       You can create a resource group based 
+         - on access schema, ie based on user previleges
+         - purpose: eg. for dev environment in which all resources may be deprovisioned when not required anymore.
+         ![resource-group-eb2d7177](https://user-images.githubusercontent.com/23476452/210381946-f036f9d8-9b75-470c-8248-eab4f873d24b.png)
+
+ ### Azure subscriptions: 
        
                 
-      
+      ![subscriptions-d415577b](https://user-images.githubusercontent.com/23476452/210381873-74418b64-043c-4e78-97f2-782d80860900.png)
+
         
