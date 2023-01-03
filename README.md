@@ -224,6 +224,11 @@
           Most directions are paried in two directions, meaning thay are the backup for the region that provides a backup for them.
           However, some regions, such as West India and Brazil South, are paired in only one direction. In a one-direction pairing, the Primary region does not provide backup for its secondary region. So, even though West India’s secondary region is South India, South India does not rely on West India. West India's secondary region is South India, but South India's secondary region is Central India. Brazil South is unique because it's paired with a region outside of its geography. Brazil South's secondary region is South Central US. The secondary region of South Central US isn't Brazil South.
              
+### Sovereign Regions
+      Sovereign regions are instances of Azure that are isolated from the main instance of Azure. You mah need to use sovereign regions for complaince and legal purposes. 
+      Azure soverign regions include: 
+        - US DoD Central, US Gov Virginia, US Gov Iowa and more: These are regions and physical and logical network-isolated instances of Azure for US government and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
+        - China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
        
                 
       
