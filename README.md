@@ -242,11 +242,41 @@
        You can create a resource group based 
          - on access schema, ie based on user previleges
          - purpose: eg. for dev environment in which all resources may be deprovisioned when not required anymore.
-         ![resource-group-eb2d7177](https://user-images.githubusercontent.com/23476452/210381946-f036f9d8-9b75-470c-8248-eab4f873d24b.png)
+
 
  ### Azure subscriptions: 
-       
-                
-      ![subscriptions-d415577b](https://user-images.githubusercontent.com/23476452/210381873-74418b64-043c-4e78-97f2-782d80860900.png)
+       Subsrciptions are used for the purpose of management, billing and scaling. 
+       In Azure an account can have one or more subscription but a subscription can only belong to an account.
+       An account is required to have a subscription in order to provision Azure resource.
+       An Azure subscription links to an Azure account, which is an identity in Azure AD or in a directory that Azure AD trusts.
+       Subscription provides authenticated and authorised access to Azure resources.
+       In multi-subscription account you can use the subscriptions to configure different billing models and apply different access-managemtn policies.
+       You can use subscriptions to define boundaries around Azure services, products and resources. 
+       There're 2 main subscription boundaries:
+         - Billing boundary: This subscription determines how an Azure account is bille for. You can create different subscriptions for different billing requirements.
+                             Azure generates different billing reports for each subscription so that you can organize and manage costs.
+         - Access control bounary: Azure applies access-management policies at the subscription level, and you can create different subscriptions to reflect organisational structures.
+                                   Eg. You can create different subscriptions for different departments to which you can apply distinct azure subscription policies. 
+                                       This billing model allows you to manage and control accesss to the resources that users provision with specific subscriptions.
+           
+## Create additional Azure subscriptions
+     In addition to creating resource groups based on functionality or access you can create additional subscriptions for resource or billing management purposes.
+     You can create additional subscriptions to separate:
+     - Environments: You can create subscriptions for different development environments- dev, test, staging, production, security, or to isolate data for compliance reasons. This design is helpful because access control occurs at the subscription level.
+     - Organisational structures: You can create subscriptions to reflect organisational structures. eg you could limit one team to lower-cost resources, while allowing the IT department a full range. this design allows you to manage and control acces to the resources that users provision within each subscription.
+     - Billing: you can create additional resources for billing purposes. Because costs are first aggregated at the subscription level, you might want to create subscriptions to manage and track costs based on your needs. For instance, you might want to create one subscription for your production workloads and another subscription for your development and testing workloads.
+## Azure management groups:
+     Management group provides a level of scope above subscriptions that enables one to group multiple subscriptions in order to efficiently manage access, policies, compliance for those subscriptions.
+     You organise subscriptions into containers called management groups and apply governance conditions to the management groups. All subscriptions under that managemnt group inherit the conditions applied to the management group.
+     Management group can be nested.
+ ### Examples of how you could use management groups
+       - Create a hierarchy that applies a policy: You could limit VM locations to the US West Region in a group called production. This policy will inherit onto all the subscriptions that are descendants of that management grouop and will apply to all VMs under those subscriptions. This security policy can't be altered by the resource or subscription owner, which allows for improved governance.
+       - Provide user access to multiple subscriptpions. By moving multiple subscriptions under a managemnt group, you can create on Azure RBAC at the management group level means that all sub-management groups, subscriptions, resource groups, and resources underneath that management group would also inherit those permissions. One assignment on the management group can enable users to have everything they need instead of scripting Azure RBAC over different subscriptions.
+       Important facts about management groups:
+         - 10,000 managment groups can be supported in a single directory
+         - A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
+         -Each management group and subscription can support only one parent.
+     
+
 
         
