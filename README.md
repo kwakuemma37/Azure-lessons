@@ -200,21 +200,21 @@
 #### Use availability zones in your apps
        - You want to ensure your services and data are redaundant so you can protect your information in case of failure.
        - Azure can make your apps highly available through availability zones.
-       - You an use availability zones to run mission-critical applications and build high-availability into your application architecture by co-location your
+       - You an use availability zones to run mission-critical applications and build high-availability into your application architecture by co-locating your
           compute, storage, networking, and data resources within an availability zone and replicating in other availability zones. NB: There may be cost in duplicating or transferring data between availability zones.
-       - Availability zones are primary for V<s, managed disks, load balancers, and SQL databases. 
+       - Availability zones are primary for VMs, managed disks, load balancers, and SQL databases. 
        - Azure services that support availability zones fall into 3 categories:
           -- Zonal services: You pin resources to a specific zone (eg. VMs, managed disks, IP addresses).
           -- Zonal-redaundant services: The platform replicates automatically across zones (eg. zone-redaundant storage, SQL database).
           -- Non-regional services: Services are always available from Azure geographies and are resilient to zone-wide outages as well as region-wide outages.
-       It's possible that an event could be so large that it impacts multiple availability zones in a single region despite the addition resiliency that availability zones provide. 
-       To proved further resiliency Azure uses Region pairs.
+       It's possible that an event could be so large that it impacts multiple availability zones in a single region despite the additional resiliency that availability zones provide. 
+       To provide further resiliency Azure uses Region pairs.
 #### Region pairs:
-       Most Azure regions are paired with another in the same geographical area  at least 300 miles away. This allows for the replication of resources across a geography that helps reduce the likelihood of interrupgions because of events susch as power outages, civil unrest, explosions, physical network outages that affect an
+       Most Azure regions are paired with another in the same geographical area  at least 300 miles away. This allows for the replication of resources across a geography that helps reduce the likelihood of interruptions because of events susch as power outages, civil unrest, explosions, physical network outages that affect an
        entire region.
        Services automatically failover to the other region in its region pair in case it is unavailable.
          NB: Not all Azure services automatically replicate data or automatically fall back from a failed region to cross-replicate to another enabled region. 
-             These require the customer to configure recovery and replication for those service.
+             This require the customer to configure recovery and replication for those services.
        You can take advantage of the wide distance between regions in a pair to provide services that are resilient, reliable and data redaundant because these regions in the pair are connected directly and may be isolated from disasters.
 ##### Additional advantages of region pairs:
         - if an Azure extensive outages occurs, one of the regions in the pair is prioritized to make sure at least one is restored as quickly as possible for applications hosted in that region pair.
@@ -225,20 +225,19 @@
           However, some regions, such as West India and Brazil South, are paired in only one direction. In a one-direction pairing, the Primary region does not provide backup for its secondary region. So, even though West India’s secondary region is South India, South India does not rely on West India. West India's secondary region is South India, but South India's secondary region is Central India. Brazil South is unique because it's paired with a region outside of its geography. Brazil South's secondary region is South Central US. The secondary region of South Central US isn't Brazil South.
              
 ### Sovereign Regions
-      Sovereign regions are instances of Azure that are isolated from the main instance of Azure. You mah need to use sovereign regions for complaince and legal purposes. 
+      Sovereign regions are instances of Azure that are isolated from the main instance of Azure. You may need to use sovereign regions for complaince and legal purposes. 
       Azure soverign regions include: 
         - US DoD Central, US Gov Virginia, US Gov Iowa and more: These are regions and physical and logical network-isolated instances of Azure for US government and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
         - China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
  # Describe Azure management infrastructure
      The Azure managmeent infrastructure include Azure resources, resource groups, subscriptions and accounts.
  ## Azure resources and resource groups
-      Resource is the basic building block of Azure. Anything you create, deploy, provision is a resource including VMs, database, apps etc.
+      Resource is the basic building block of Azure. Anything you create, deploy, provision is a resource in Azure including VMs, database, apps etc.
  ### Resource groups:
        Resource groups are the grouping of resources in Azure. Resource groups and resources have a one-to-many relationship, meaning there can be many resources 
-       in a resource group but a resource and only be in a single group. 
+       in a resource group but a resource can only be in a single group. 
        Every resource requires to be in a resource group.
-       Resource group helps to manage resources easier ie. any action that is performed on the group effects all resources in that group. eg When you delete a
-       resource group, resources it are also deleted.
+       Resource group helps to manage resources easier ie. any action that is performed or policy applied on the group effects all resources in that group. eg When you delete a resource group, resources in it are also deleted.
        You can create a resource group based 
          - on access schema, ie based on user previleges
          - purpose: eg. for dev environment in which all resources may be deprovisioned when not required anymore.
@@ -247,20 +246,20 @@
  ### Azure subscriptions: 
        Subsrciptions are used for the purpose of management, billing and scaling. 
        In Azure an account can have one or more subscription but a subscription can only belong to an account.
-       An account is required to have a subscription in order to provision Azure resource.
+       An account is required to have a subscription in order to provision Azure resources.
        An Azure subscription links to an Azure account, which is an identity in Azure AD or in a directory that Azure AD trusts.
        Subscription provides authenticated and authorised access to Azure resources.
-       In multi-subscription account you can use the subscriptions to configure different billing models and apply different access-managemtn policies.
+       In multi-subscription account you can use the subscriptions to configure different billing models and apply different access-management policies.
        You can use subscriptions to define boundaries around Azure services, products and resources. 
        There're 2 main subscription boundaries:
-         - Billing boundary: This subscription determines how an Azure account is bille for. You can create different subscriptions for different billing requirements.
+         - Billing boundary: This subscription determines how an Azure account is billed for. You can create different subscriptions for different billing requirements.
                              Azure generates different billing reports for each subscription so that you can organize and manage costs.
          - Access control bounary: Azure applies access-management policies at the subscription level, and you can create different subscriptions to reflect organisational structures.
                                    Eg. You can create different subscriptions for different departments to which you can apply distinct azure subscription policies. 
                                        This billing model allows you to manage and control accesss to the resources that users provision with specific subscriptions.
            
 ## Create additional Azure subscriptions
-     In addition to creating resource groups based on functionality or access you can create additional subscriptions for resource or billing management purposes.
+     In addition to creating resource groups based on functionality or access you can create additional subscriptions for resource or billing management purposes,
      You can create additional subscriptions to separate:
      - Environments: You can create subscriptions for different development environments- dev, test, staging, production, security, or to isolate data for compliance reasons. This design is helpful because access control occurs at the subscription level.
      - Organisational structures: You can create subscriptions to reflect organisational structures. eg you could limit one team to lower-cost resources, while allowing the IT department a full range. this design allows you to manage and control acces to the resources that users provision within each subscription.
@@ -271,7 +270,7 @@
      Management group can be nested.
  ### Examples of how you could use management groups
        - Create a hierarchy that applies a policy: You could limit VM locations to the US West Region in a group called production. This policy will inherit onto all the subscriptions that are descendants of that management grouop and will apply to all VMs under those subscriptions. This security policy can't be altered by the resource or subscription owner, which allows for improved governance.
-       - Provide user access to multiple subscriptpions. By moving multiple subscriptions under a managemnt group, you can create on Azure RBAC at the management group level means that all sub-management groups, subscriptions, resource groups, and resources underneath that management group would also inherit those permissions. One assignment on the management group can enable users to have everything they need instead of scripting Azure RBAC over different subscriptions.
+       - Provide user access to multiple subscriptpions. By moving multiple subscriptions under a managemnt group, you can create an Azure RBAC at the management group level means that all sub-management groups, subscriptions, resource groups, and resources underneath that management group would also inherit those permissions. One assignment on the management group can enable users to have everything they need instead of scripting Azure RBAC over different subscriptions.
        Important facts about management groups:
          - 10,000 managment groups can be supported in a single directory
          - A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
