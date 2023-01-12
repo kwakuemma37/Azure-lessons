@@ -277,7 +277,24 @@
          -Each management group and subscription can support only one parent.
 ## Describe Azure compute and networking services.  
      ### Describe Azure Virtual Machines
-
+           Azure VM lets you create and run VMs in the cloud. It provides VM as an IaaS in the form of virtualized server and can be used in many situations. VM is appropriate when
+             - YOu need control over the operating system
+             - You need to run custom software
+             - You to use custom hosting configurations
+           With VM, you have the flexibility of virtualized server without the hurdle of hardware maintainance.
+           You can quickly provision a VM by using a preconfigure image. The image can have needed software configured in it.
+      ###  Scale VMs in Azure
+             You can run single VM for testing, development, or minor tasks.
+             You can group VMs together to provide high availability, scalability and redaundancy.
+             Scale sets and availability sets helps manage the grouping of VMs for you.
+      #### Virtual machines scale sets
+             VM scale sets enables you to create and manage a group of identical, load balanced VMs.
+             If you simply create multiple VMs with the same purpose, you need to make sure that they have similar configurations and then setup network routing parameters to ensure efficiency. Also you need to manually monitor the VMs to know when to decrease or increase the number of VMs.
+               With Scales set this management becomes easier. It allows you to centrally manage, configure, and update a large number of VMs in minutes. You can configure for the number of VMs to increase or decrease automatically in response to demand, or on schedule based. VM scale sets can also automatically deploy a load balancer to ensure the effienct usage of resources.
+            Scale sets enables VMs to be centrally managed, configured, and updated, and will automatically increase or decrease the number of VM instances in response to deman or a defined schedule
+      #### VM availability sets
+             VM availability sets helps build resilient, higbly available environment
+             
 
 
         
