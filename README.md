@@ -293,8 +293,16 @@
                With Scales set this management becomes easier. It allows you to centrally manage, configure, and update a large number of VMs in minutes. You can configure for the number of VMs to increase or decrease automatically in response to demand, or on schedule based. VM scale sets can also automatically deploy a load balancer to ensure the effienct usage of resources.
             Scale sets enables VMs to be centrally managed, configured, and updated, and will automatically increase or decrease the number of VM instances in response to deman or a defined schedule
       #### VM availability sets
-             VM availability sets helps build resilient, higbly available environment
+             VM availability sets helps build resilient, highly available environment. Availability set are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing all your VMs with a single network or power failure.
+             Availability sets do this by grouping VMs in 2 ways: update domain and fault domain
+             - Update domain: The update domain groups VMs that can be rebooted at the same time. This allows you to apply updates knowing that only one availability grouping will be offline at a time. All machines in one update domain will be updated. The next update domain group needs to wait 30 mins for the previous update group that in the process of updating to recover.
+             - Fault domain: Fault domain groups VMs that a connect to a common power source and network switch. VM availability set splits VMs update to 3 fault domains. This helps protect power or network failure by having VMs in different fault domain. 
              
+             There's no additional cost for configuring an availability set.
+             
+
+             Cloud VM use cases:
+             - During test and development: 
 
 
         
