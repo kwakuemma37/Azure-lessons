@@ -276,23 +276,24 @@
          - A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
          -Each management group and subscription can support only one parent.
 ## Describe Azure compute and networking services.  
-     ### Describe Azure Virtual Machines
+## Describe Azure Virtual Machines
            Azure VM lets you create and run VMs in the cloud. It provides VM as an IaaS in the form of virtualized server and can be used in many situations. VM is appropriate when
              - YOu need control over the operating system
              - You need to run custom software
              - You to use custom hosting configurations
            With VM, you have the flexibility of virtualized server without the hurdle of hardware maintainance.
            You can quickly provision a VM by using a preconfigure image. The image can have needed software configured in it.
-      ###  Scale VMs in Azure
+           - VM provide abstraction layer for CPU, memory and storage that can be changed without investing in new hardware whiles still allowing the environment to flexible and secure
+###  Scale VMs in Azure
              You can run single VM for testing, development, or minor tasks.
              You can group VMs together to provide high availability, scalability and redaundancy.
              Scale sets and availability sets helps manage the grouping of VMs for you.
-      #### Virtual machines scale sets
+#### Virtual machines scale sets
              VM scale sets enables you to create and manage a group of identical, load balanced VMs.
              If you simply create multiple VMs with the same purpose, you need to make sure that they have similar configurations and then setup network routing parameters to ensure efficiency. Also you need to manually monitor the VMs to know when to decrease or increase the number of VMs.
                With Scales set this management becomes easier. It allows you to centrally manage, configure, and update a large number of VMs in minutes. You can configure for the number of VMs to increase or decrease automatically in response to demand, or on schedule based. VM scale sets can also automatically deploy a load balancer to ensure the effienct usage of resources.
             Scale sets enables VMs to be centrally managed, configured, and updated, and will automatically increase or decrease the number of VM instances in response to deman or a defined schedule
-      #### VM availability sets
+#### VM availability sets
              VM availability sets helps build resilient, highly available environment. Availability set are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing all your VMs with a single network or power failure.
              Availability sets do this by grouping VMs in 2 ways: update domain and fault domain
              - Update domain: The update domain groups VMs that can be rebooted at the same time. This allows you to apply updates knowing that only one availability grouping will be offline at a time. All machines in one update domain will be updated. The next update domain group needs to wait 30 mins for the previous update group that in the process of updating to recover.
@@ -319,4 +320,59 @@
      - User sessions are isolated in both single and multi-session environments.
 ### Multi-session Windows 10 or Windows 11 deployment
      - Provides more consistent experience with broader application support compared to windows server-based OSs.
+      
+## Describe Azure Containers
+     Containers let you run multiple instances of an  application on a single host machine.
+### What're containers
+      - A virtualization environment
+      - Multiple containers can be run on a single physical or virtual host, like virtual machines
+      - You don't manage the operating system of a container (with VM you have to)
+      - Containers are
+            -- light weight,
+            -- designed to be scaled out,
+            -- designed to be stopped dynamically
+      - As application demand increases you can create and deploy VMs but containers are light weight and a more agile method
+      - Designed to let you respond to changes
+      - Can be quickly restared when there's crash or hardware interruption.
+#### cons of VM
+       - Can run only one OS at a time
+       - If applications require different runtime environments, they require several VMs.
+       - Can be slow to start or take a snapshot because it emulates a full computer
+
+       NB: Virtual machine virtualize the hardware: Containers virtualize the Operation system
+
+#### VMs or containers
+     - VM
+          - When complete control of OS is required
+     - Containers
+      - When Portability is required
+      - Performance required.
+### Azure container instances
+      - containers are PaaS offerings.
+      - 
+
+## Azure Functions
+     - Event driven,
+     - Severless compute option,
+     - Doesn't require maintaining VMs or containers
+     - No need to keep provisioned resources when there're no events: event wakes the function.
+     - Responsibility of managing underlying servers are already taken care by the platform
+     - Ideal when concerned about only the code running your service and not about the underlying platform or infrastructure.
+     - Commonly used when needed to perform a task in response to  and event 
+           - often via a REST request
+           - timer
+           - message from another Azure service
+     - Good choice when demand is variable
+## Benefit of Azure functions
+     1. No infrastructure management; simply deploy your code, and it runs with high availability
+     2. Scalability
+            - Applicaitons continue to run, irrespective of the workload
+            - can scale from nothing to 10s of thousands of requests without any configurations
+            - Only pay for what you use. 
+                   - Resources are only allocated from a direct action
+                   - Only pay for code running time instead of resources used (resources used are automatically deallocated).
+
+    Functions can be
+      - Stateles : behaves as it is restarted everytime it responses to an event
+      - Sateful (Durable functions): A context is passed throught the function to keep track prior activity
       
