@@ -304,5 +304,11 @@
              Cloud VM use cases:
              - During test and development: 
 
-
-        
+## Azure virtual desktop
+     - Another form of virtual machine
+     - A desktop and application virtualization serice that runs in the cloud
+     - Enables to run windows hosted in the cloud from any location.
+     - Works across devices and operating systems
+     - Works with apps that can be used to access remote desktops and most modern browsers
+### Enhance securty
+      
