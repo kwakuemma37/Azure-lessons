@@ -375,4 +375,38 @@
     Functions can be
       - Stateles : behaves as it is restarted everytime it responses to an event
       - Sateful (Durable functions): A context is passed throught the function to keep track prior activity
-      
+## Describe Azure App service
+     - An http based service
+     - Offers automatic scaling and high availability
+     - Enables automated deployments from any Git repo to support a continuous deployment model.
+     - Lets you focus on building  and maintaining your app
+     - Azure focuses on keeping the environment up and running.
+     - Endpoints can be secured
+     - Sites can be scaled quickly to handle hight traffic loads.
+     - Built-in load balancing and traffic manager provide high availability
+     - Can be used to run app styles eg.
+         - Web apis
+         - Webjobs
+         - Mobile apps
+         - Web apps
+### Type of app services
+      - Web apps
+          - provides full support for hosting web apps 
+          - Hosting OS can be Linux or Windows
+      - API apps
+          - offers full swagger support
+          - Ability to package and publish you API in Azure Marketplace
+          - Produced apps can be consumed from any HTTP or HTTPs-based client
+      - Webjobs
+          - Can run a program (.exe, java, PHP,python or Node.js)
+          - Can run script (.cmd, .bat, powershell or bash)
+          - Runs in the same context as a web app, API app or mobile app.
+          - Can be scheduled or run by a trigger.
+          - Often used to run background tasks as part of an application logic. 
+      - Mobile apps
+          - Used to build a backend for iOS and Android apps
+          - Store mobile app data in a cloud-base SQL database
+          - Authenticate customers against common social provider eg. Google, Twitter etch
+          - Send push notifications
+          - Execute custom back-end logic in C# or Node.js
+          - Has SDK support for native iOS and Android, Xamarin, and React native apps.
