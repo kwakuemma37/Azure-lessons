@@ -311,4 +311,12 @@
      - Works across devices and operating systems
      - Works with apps that can be used to access remote desktops and most modern browsers
 ### Enhance securty
+     - Provides centralized security management for users' desktops with Azure Active direcorty
+     - Users sign-ins can be secured by enabling Multifactor authentication
+     - Data can secured by assigning granular role-based access controls (RBACs)
+
+     - Reduced risk of confidential data being left on personal devices because actual desktop and apps are running in the cloud.
+     - User sessions are isolated in both single and multi-session environments.
+### Multi-session Windows 10 or Windows 11 deployment
+     - Provides more consistent experience with broader application support compared to windows server-based OSs.
       
