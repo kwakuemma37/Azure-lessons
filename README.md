@@ -518,4 +518,75 @@
        - User defined routed (UDR): 
           - Allows you to routing tables  between subnets within a virtual network or between virtual networks.
           - Allows for greater control over network traffic flow.
- 
+### Describe Azure Virtual private networks
+#### VPN:
+      - Uses encrypted tunnel within another network
+      - connects 2 or more trusted private networks to one another over an untrusted network (public internet)
+      - Prevents eavesdropping and other attacks by encrpting traffic while travelling over the untrusted network
+      - Enables network to safely and securely share sensitive information
+#### VPN Gateways:
+      - A type of virtual network gateway
+      - Deployed in a dedicated subnet of the virtual network
+      - Enables the following connectivitiy
+            - On-premises to Virtual nework connections through site-to-site connection
+            - Individual devices to virtual network connetions through point-to-site connection
+            - virtual network to other virual network through a network-to-network connection
+      - All data:
+            - Encrypted within private tunnel as it crosses the internet
+      - Only one VPN gateway can be deployed in each virtual network
+      - A VPN gateway can connect multiple locations (either virtual networks or on-premises datacenters)
+      - There're 2 types: Policy-based or route-based.
+          - Difference is how traffic to be encrypted is specified
+          - the 2 types uses a pre-shared key as the only authentication method
+          -- Policy-based gateways: 
+                  - Specified static IP address of packets that are to be encrypted through each tunnel.
+                  - evaluates each data package against the set of static IP address to determine the tunnel where the packets is going to be sent through
+          -- Routing-based gateways: 
+                  - IP tunnels:
+                        - Modeled as a network interface
+                        - or virutal tunnel interface.
+                  - IP routing:
+                        - Static routes or dynamic routing protocols
+                        - decides which one of these tunnel interfaces to use when sending each packet.
+                  - Preferred under the following types of connectivity:
+                        - Connection between virtual networks
+                        - point-to-site connetions
+                        - multisite connections
+                        - coexistence with an Azure ExpressRout gateway
+##### - High availability scenarios
+          To achieve highly available and fault tolerant VPN configuration.
+          Ways to achieve maximum resiliency of a VPN gateway
+            - Active/Standby:
+                  - VPN gateway
+                        - deployed as 2 instances in active/standby configuration (even if only one VPN gateway resource is seen in Azure)
+                  - Gateway active Instance:
+                        -  Interrupted by planned/uplanned maintenance
+                              - standby instance
+                                    - Automatically assumes responsibility for connections without any user intervention
+                                          - Connections: 
+                                                - interrupted during this failover
+                                                - restored within a few seconds for planned maintenance
+                                                - restored within 90 seconds for unplanned disruptions
+            - Active/active:
+                  - BGP routing protocol let you deploy VPN gateways in active/active configuration
+                  - You assign public IP address to each of the instance
+                  - Create separate tunnels from the on-premises devices to each IP address
+                  - High availability can be extended by deploying additional VPN device on-premises.
+
+            - ExpressRoute failover
+                  - You can configure VPN gateway as a secure failover path for ExpressRoute connections.
+                  - ExpressRoute circuits have built-in resiliency but aren't immune to physical problems like outages, cable breaks etc
+                  - You can provision VPN that uses internet as an alternative method of connectivity in situation where high-availability is required and
+                     there's risk associated with an outage of an ExpressRoute circuit.
+                  
+            - Zone-redaundant gateways
+                  - Take advantage of regions that support availability zones by deploying VPN gateways and ExpressRoute gateways in a zonde-redaundanct configuration.
+                  - This configuration brings virtual network gateways
+                              - resiliency,
+                              - scalability,
+                              - higher availability 
+                  - On-premises network connectivity to Azure can be protected by deploying gateways to Azure availability zones. This physically and logically separates the gateways in a region while protecting the on-premises to Azure connection.
+                  - NB: Gateways in the various availability zones
+                              - have different sku each 
+                              - uses standar IP address instaed of basic IP address
+                              
