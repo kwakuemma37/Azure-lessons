@@ -410,3 +410,112 @@
           - Send push notifications
           - Execute custom back-end logic in C# or Node.js
           - Has SDK support for native iOS and Android, Xamarin, and React native apps.
+## Describe Azure Virtual Networking
+      - Azure virtual networks and Virtual subnets 
+            - enable Azure resources to communictate 
+            - with each other,
+            - with users on the internet,
+            - with on-premises client computers
+      - think of it as an extension of your on-premise network with resources that link other Azure resources.
+### Key network capabilities provided by Azure networks
+      -- Isolation and segmentation
+      -- internet communications
+      -- Communicate between Azure resources
+      -- communicate with on-premises resrouces
+      -- Route network traffic
+      -- Filter network traffic
+      -- connect virtual networks
+      
+      Azure virtual networking supports both private and public endpoints to enable communication between external or internal resourcs with other internal resources.
+        - public endpoints:
+              - have a public IP address
+              - can be accessed from anywhere in the world.
+        - private endpoints:
+              - exist within a virtual network
+              - have private IP address from within the address space of that virtual network
+#### Isolation and segmentation
+       Azure virtual network 
+         - allows you to create multiple isolated virtual networks
+         - You define private IP and public IP address when you set up a virtual network
+         - IP range only exists within the virtual network
+         - IP address range 
+              - isn't internet routable.
+              - can be divided into subnets
+              - part of the defined space can be allocated to each named subnet.
+      Name resolution:
+          - You can use name resolution service built into Azure
+          - You can configure the virtual network to either use an internal or external DNS server.
+#### Internet communications
+      - Enable internet communication by
+          1. Assigning public IP addresses to resources
+          2. Placing resource behind a public load balancer
+#### Communicate between Azure resources
+      There are 2 possible ways to let resources communicate with each other
+        1. using virtual networks
+        2. Using service endpoints to connect Azure resources types. eg. Azure SQL databases and storage accounts
+             This enables you to link multiple Azure resources to virtual networks to improve security and provide optimal routing between resources.
+#### Communicate with on-premises resources
+      - This enables 
+            - link together resources on local on-premises environment and resources in Azure subscription.
+            - you to create network that spans both local on-premises environment and cloud environments.
+      3 mechanisms to achieve network that spans both local and cloud environments
+            - Point-to-site VPN:
+                  - Computers outside the orginsation (Client computers) connects back into the corporate network.
+                  - Client computer initiates and encrypted VPN connection to connect to the Azure virtual network
+            - Site-to-site VPN:
+                  - links on-premises VPN device or gateway to the Azure VPN gateway in a virtual network
+                  - Devices then appear as being on the local network.
+                  - Connection: 
+                        - encrypted
+                        - works over internet
+            - Azure expressRoute:
+                  - a dedicated private connectivity to Azure
+                  - doesn't travel over the internet
+                  - Useful when
+                        - greater bandwith is needed
+                        - higher levels of security is needed.
+#### Route network traffic
+      Azure by defaut routes traffic between
+        - subnets on connected virtual networks,
+        - on-premises networks
+        - Internet
+      Control routing by overriding settings as follows
+        - Route tables:
+            - Let you define how traffic should be directed
+            - You can create custom route tables
+                - To control how packets are routed between subnets.
+        - Border Gateway protocol (BGP): 
+            to propagate on-premises BGP to Azure virtual networks, It
+            - Works with:
+                - Azure VPN gateways
+                - Azure route server
+                - or Azure expressRoute 
+#### filter Network traffic
+       Filter network by using
+           - network security groups: 
+               - An Azure resource
+               - can contain multiple inbound and outbound security rules.
+               - apply secrity rules to allow or block traffic based on 
+                   - source IP address
+                   - destination IP address
+                   - port
+                   - protocol
+            - Network virtual appliances:
+                  - Specialized VMs
+                  - can be compared to hardened network appliance
+                  - Carries out a particular network function eg:
+                      - running a firewall,
+                      - performing wide arean network (WAN) optimization.
+#### connect virtual networks.
+       - network peering.
+          - lets you  Link virtual networks together
+          - allows 2 virtual neworks to connect directly to each other
+          - Network traffic is private
+          - travels on Microsoft backbone network
+          - Does not enter public internet
+          - Resources in each virtual network can communicate to each other.
+          - Provides global interconnected network through Azure ( virtual networks can be in separate regions)
+       - User defined routed (UDR): 
+          - Allows you to routing tables  between subnets within a virtual network or between virtual networks.
+          - Allows for greater control over network traffic flow.
+ 
