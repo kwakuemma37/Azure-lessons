@@ -275,15 +275,17 @@
          - 10,000 managment groups can be supported in a single directory
          - A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
          -Each management group and subscription can support only one parent.
-## Describe Azure compute and networking services.  
+# Describe Azure compute and networking services.  
 ## Describe Azure Virtual Machines
-           Azure VM lets you create and run VMs in the cloud. It provides VM as an IaaS in the form of virtualized server and can be used in many situations. VM is appropriate when
-             - YOu need control over the operating system
+           Azure VM lets you create and run VMs in the cloud. 
+           It provides VM as an IaaS in the form of virtualized server and can be used in many situations. 
+           VM is appropriate when
+             - You need control over the operating system
              - You need to run custom software
              - You to use custom hosting configurations
            With VM, you have the flexibility of virtualized server without the hurdle of hardware maintainance.
            You can quickly provision a VM by using a preconfigure image. The image can have needed software configured in it.
-           - VM provide abstraction layer for CPU, memory and storage that can be changed without investing in new hardware whiles still allowing the environment to flexible and secure
+           - VM provide abstraction layer for CPU, memory and storage that can be changed without investing in new hardware whiles still allowing the environment to be flexible and secure
 ###  Scale VMs in Azure
              You can run single VM for testing, development, or minor tasks.
              You can group VMs together to provide high availability, scalability and redaundancy.
@@ -291,13 +293,23 @@
 #### Virtual machines scale sets
              VM scale sets enables you to create and manage a group of identical, load balanced VMs.
              If you simply create multiple VMs with the same purpose, you need to make sure that they have similar configurations and then setup network routing parameters to ensure efficiency. Also you need to manually monitor the VMs to know when to decrease or increase the number of VMs.
-               With Scales set this management becomes easier. It allows you to centrally manage, configure, and update a large number of VMs in minutes. You can configure for the number of VMs to increase or decrease automatically in response to demand, or on schedule based. VM scale sets can also automatically deploy a load balancer to ensure the effienct usage of resources.
-            Scale sets enables VMs to be centrally managed, configured, and updated, and will automatically increase or decrease the number of VM instances in response to deman or a defined schedule
+               With Scales set this management becomes easier. 
+            -  It allows you to centrally manage, configure, and update a large number of VMs in minutes. 
+            - You can configure for the number of VMs to increase or decrease automatically in response to demand, or on schedule based. - VM scale sets can also automatically deploy a load balancer to ensure the effienct usage of resources.
+            - Scale sets enables VMs to be centrally managed, configured, and updated, and will automatically increase or decrease the number of VM instances in response to deman or a defined schedule
 #### VM availability sets
-             VM availability sets helps build resilient, highly available environment. Availability set are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing all your VMs with a single network or power failure.
-             Availability sets do this by grouping VMs in 2 ways: update domain and fault domain
-             - Update domain: The update domain groups VMs that can be rebooted at the same time. This allows you to apply updates knowing that only one availability grouping will be offline at a time. All machines in one update domain will be updated. The next update domain group needs to wait 30 mins for the previous update group that in the process of updating to recover.
-             - Fault domain: Fault domain groups VMs that a connect to a common power source and network switch. VM availability set splits VMs update to 3 fault domains. This helps protect power or network failure by having VMs in different fault domain. 
+             - VM availability sets helps build resilient, highly available environment. 
+             - Availability set are designed to ensure that VMs stagger updates and have varied power and network connectivity, preventing you from losing all your VMs with a single network or power failure.
+             - Availability sets do this by grouping VMs in 2 ways: 
+                 update domain and fault domain
+             - Update domain: 
+                  The update domain groups VMs that can be rebooted at the same time. 
+                  This allows you to apply updates knowing that only one availability grouping will be offline at a time. 
+                  All machines in one update domain will be updated. 
+                  The next update domain group needs to wait 30 mins for the previous update group that is in the process of updating to recover.
+             - Fault domain: 
+                  Fault domain groups VMs that are connected to a common power source and network switch. 
+                  VM availability set splits VMs update to 3 fault domains. This helps protect power or network failure by having VMs in different fault domain. 
              
              There's no additional cost for configuring an availability set.
              
@@ -311,11 +323,10 @@
      - Enables to run windows hosted in the cloud from any location.
      - Works across devices and operating systems
      - Works with apps that can be used to access remote desktops and most modern browsers
-### Enhance securty
+### Enhanced securty
      - Provides centralized security management for users' desktops with Azure Active direcorty
      - Users sign-ins can be secured by enabling Multifactor authentication
      - Data can secured by assigning granular role-based access controls (RBACs)
-
      - Reduced risk of confidential data being left on personal devices because actual desktop and apps are running in the cloud.
      - User sessions are isolated in both single and multi-session environments.
 ### Multi-session Windows 10 or Windows 11 deployment
@@ -324,7 +335,7 @@
 ## Describe Azure Containers
      Containers let you run multiple instances of an  application on a single host machine.
 ### What're containers
-      - A virtualization environment
+      - A virtualization environment ( abstracts the OS)
       - Multiple containers can be run on a single physical or virtual host, like virtual machines
       - You don't manage the operating system of a container (with VM you have to)
       - Containers are
@@ -341,7 +352,7 @@
 
        NB: Virtual machine virtualize the hardware: Containers virtualize the Operation system
 
-#### VMs or containers
+#### To use VMs or containers?
      - VM
           - When complete control of OS is required
      - Containers
@@ -370,7 +381,7 @@
             - can scale from nothing to 10s of thousands of requests without any configurations
             - Only pay for what you use. 
                    - Resources are only allocated from a direct action
-                   - Only pay for code running time instead of resources used (resources used are automatically deallocated).
+                   - Only pay for code-running time instead of resources used (resources used are automatically deallocated).
 
     Functions can be
       - Stateles : behaves as it is restarted everytime it responses to an event
@@ -382,8 +393,8 @@
      - Lets you focus on building  and maintaining your app
      - Azure focuses on keeping the environment up and running.
      - Endpoints can be secured
-     - Sites can be scaled quickly to handle hight traffic loads.
-     - Built-in load balancing and traffic manager provide high availability
+     - Sites can be scaled quickly to handle high traffic loads.
+     - Built-in load balancing and traffic manager provides high availability
      - Can be used to run app styles eg.
          - Web apis
          - Webjobs
@@ -395,27 +406,27 @@
           - Hosting OS can be Linux or Windows
       - API apps
           - offers full swagger support
-          - Ability to package and publish you API in Azure Marketplace
+          - Ability to package and publish your API in Azure Marketplace
           - Produced apps can be consumed from any HTTP or HTTPs-based client
       - Webjobs
           - Can run a program (.exe, java, PHP,python or Node.js)
           - Can run script (.cmd, .bat, powershell or bash)
-          - Runs in the same context as a web app, API app or mobile app.
+          - Runs in the same context as a web app, API app or mobile app so it can be triggered by those app types.
           - Can be scheduled or run by a trigger.
           - Often used to run background tasks as part of an application logic. 
       - Mobile apps
           - Used to build a backend for iOS and Android apps
-          - Store mobile app data in a cloud-base SQL database
-          - Authenticate customers against common social provider eg. Google, Twitter etch
+          - Store mobile app data in a cloud-based SQL database
+          - Authenticate customers against common social provider eg. Google, Twitter etc
           - Send push notifications
           - Execute custom back-end logic in C# or Node.js
           - Has SDK support for native iOS and Android, Xamarin, and React native apps.
 ## Describe Azure Virtual Networking
       - Azure virtual networks and Virtual subnets 
             - enable Azure resources to communictate 
-            - with each other,
-            - with users on the internet,
-            - with on-premises client computers
+              - with each other,
+              - with users on the internet,
+              - with on-premises client computers
       - think of it as an extension of your on-premise network with resources that link other Azure resources.
 ### Key network capabilities provided by Azure networks
       -- Isolation and segmentation
@@ -436,7 +447,7 @@
 #### Isolation and segmentation
        Azure virtual network 
          - allows you to create multiple isolated virtual networks
-         - You define private IP and public IP address when you set up a virtual network
+         - You define private IP and public IP addresses when you set up a virtual network
          - IP range only exists within the virtual network
          - IP address range 
               - isn't internet routable.
@@ -456,12 +467,12 @@
              This enables you to link multiple Azure resources to virtual networks to improve security and provide optimal routing between resources.
 #### Communicate with on-premises resources
       - This enables 
-            - link together resources on local on-premises environment and resources in Azure subscription.
+            - you to link  together resources on local on-premises environment and resources in Azure subscriptions.
             - you to create network that spans both local on-premises environment and cloud environments.
       3 mechanisms to achieve network that spans both local and cloud environments
             - Point-to-site VPN:
                   - Computers outside the orginsation (Client computers) connects back into the corporate network.
-                  - Client computer initiates and encrypted VPN connection to connect to the Azure virtual network
+                  - Client computer initiates an encrypted VPN connection to connect to the Azure virtual network
             - Site-to-site VPN:
                   - links on-premises VPN device or gateway to the Azure VPN gateway in a virtual network
                   - Devices then appear as being on the local network.
@@ -479,7 +490,7 @@
         - subnets on connected virtual networks,
         - on-premises networks
         - Internet
-      Control routing by overriding settings as follows
+##### Control routing by overriding settings as follows
         - Route tables:
             - Let you define how traffic should be directed
             - You can create custom route tables
@@ -494,7 +505,7 @@
        Filter network by using
            - network security groups: 
                - An Azure resource
-               - can contain multiple inbound and outbound security rules.
+                   - can contain multiple inbound and outbound security rules.
                - apply secrity rules to allow or block traffic based on 
                    - source IP address
                    - destination IP address
@@ -505,7 +516,7 @@
                   - can be compared to hardened network appliance
                   - Carries out a particular network function eg:
                       - running a firewall,
-                      - performing wide arean network (WAN) optimization.
+                      - performing wide area network (WAN) optimization.
 #### connect virtual networks.
        - network peering.
           - lets you  Link virtual networks together
@@ -515,18 +526,19 @@
           - Does not enter public internet
           - Resources in each virtual network can communicate to each other.
           - Provides global interconnected network through Azure ( virtual networks can be in separate regions)
-       - User defined routed (UDR): 
-          - Allows you to routing tables  between subnets within a virtual network or between virtual networks.
+       - User defined route (UDR): 
+          - Allows you to set routing tables  between subnets within a virtual network or between virtual networks.
           - Allows for greater control over network traffic flow.
 ### Describe Azure Virtual private networks
 #### VPN:
       - Uses encrypted tunnel within another network
       - connects 2 or more trusted private networks to one another over an untrusted network (public internet)
-      - Prevents eavesdropping and other attacks by encrpting traffic while travelling over the untrusted network
+      - Prevents eavesdropping and other attacks by encrypting traffic while travelling over the untrusted network
       - Enables network to safely and securely share sensitive information
 #### VPN Gateways:
       - A type of virtual network gateway
       - Deployed in a dedicated subnet of the virtual network
+     How does VPN gateway enables connectivity
       - Enables the following connectivitiy
             - On-premises to Virtual nework connections through site-to-site connection
             - Individual devices to virtual network connetions through point-to-site connection
@@ -535,13 +547,14 @@
             - Encrypted within private tunnel as it crosses the internet
       - Only one VPN gateway can be deployed in each virtual network
       - A VPN gateway can connect multiple locations (either virtual networks or on-premises datacenters)
-      - There're 2 types: Policy-based or route-based.
-          - Difference is how traffic to be encrypted is specified
-          - the 2 types uses a pre-shared key as the only authentication method
-          -- Policy-based gateways: 
+      - There're 2 types: 
+            Policy-based or route-based.
+              - Difference is how traffic to be encrypted is specified
+              - the 2 types uses a pre-shared key as the only authentication method
+            - Policy-based gateways: 
                   - Specified static IP address of packets that are to be encrypted through each tunnel.
                   - evaluates each data package against the set of static IP address to determine the tunnel where the packets is going to be sent through
-          -- Routing-based gateways: 
+            - Routing-based gateways: 
                   - IP tunnels:
                         - Modeled as a network interface
                         - or virutal tunnel interface.
@@ -552,25 +565,25 @@
                         - Connection between virtual networks
                         - point-to-site connetions
                         - multisite connections
-                        - coexistence with an Azure ExpressRout gateway
+                        - coexistence with an Azure ExpressRoute gateway
 ##### - High availability scenarios
           To achieve highly available and fault tolerant VPN configuration.
           Ways to achieve maximum resiliency of a VPN gateway
             - Active/Standby:
                   - VPN gateway
-                        - deployed as 2 instances in active/standby configuration (even if only one VPN gateway resource is seen in Azure)
+                        - is deployed as 2 instances in active/standby configuration (even if only one VPN gateway resource is seen in Azure)
                   - Gateway active Instance:
                         -  Interrupted by planned/uplanned maintenance
-                              - standby instance
-                                    - Automatically assumes responsibility for connections without any user intervention
-                                          - Connections: 
-                                                - interrupted during this failover
-                                                - restored within a few seconds for planned maintenance
-                                                - restored within 90 seconds for unplanned disruptions
+                  - standby instance
+                        - Automatically assumes responsibility for connections without any user intervention
+                              - Connections: 
+                                    - interrupted during this failover
+                                    - restored within a few seconds for planned maintenance
+                                    - restored within 90 seconds for unplanned disruptions
             - Active/active:
-                  - BGP routing protocol let you deploy VPN gateways in active/active configuration
+                  - BGP routing protocol lets you deploy VPN gateways in active/active configuration
                   - You assign public IP address to each of the instance
-                  - Create separate tunnels from the on-premises devices to each IP address
+                  - Create separate tunnels from the on-premises devices to each IP addresses
                   - High availability can be extended by deploying additional VPN device on-premises.
 
             - ExpressRoute failover
@@ -580,7 +593,7 @@
                      there's risk associated with an outage of an ExpressRoute circuit.
                   
             - Zone-redaundant gateways
-                  - Take advantage of regions that support availability zones by deploying VPN gateways and ExpressRoute gateways in a zonde-redaundanct configuration.
+                  - Take advantage of regions that support availability zones by deploying VPN gateways and ExpressRoute gateways in a zone-redaundanct configuration.
                   - This configuration brings virtual network gateways
                               - resiliency,
                               - scalability,
@@ -603,7 +616,7 @@
             - any-to-any(IP VPN),or
             - Virtual crosss-connection through a connectivity provider at a colocation facility
 #### Features and benefits of ExpressRoute
-      - Connectivity to MS cloud services acrosss all regions in the geopolitical REgion.
+      - Connectivity to MS cloud services acrosss all regions in the geopolitical Region.
       - ExpressRoute Global reach lets you have global connectivity to MS services accross all regions
       - Dynamic routing between your network and Microsoft via border Gateway protocol (BGP)
       - Built-in redaundancy at every peering location for higher reliability
@@ -618,7 +631,7 @@
 #### Built-in redaundancy
       - Each connectivity provider uses redaundant devices to ensure that connections established with Microsoft are highly available.
         You can configure multiple circuits to implement this feature
-#### ExpressRoute connectivity models
+#### ExpressRoute connectivity models ( What ways can you connect to ExpressRoute)
       - CloudExchange colocation
       - Point-to-point Ethernet connection
       - Any-to-Any connection
@@ -626,17 +639,17 @@
 ##### Colocation at a cloud exchange
       - colocation refers to your office, Datacenter, or other facility being physically colocated at a cloud exchange, such an ISP
       - If your facility is co-located at a cloud exchange, you can request virtual cross-connect to the Microsoft cloud
-##### Point-to-Point Ethernect connection
+##### Point-to-Point Ethernet connection
       - This refers to using point-to-point conneciton to connect your facility to MS 
 ##### Any-to-Any neworks
-      - You can integrate you wide area network (WAN) with Azure by providing connections to your officex and datacenters.
+      - You can integrate you wide area network (WAN) with Azure by providing connections to your offices and datacenters.
         Azure ingegrates with your WAN connection to provide a connection like you would have between your datacenter and any branch offices.
 ##### Directly from ExpressRoute sites
       - You can directly connect to Microsoft's global network at a peering location.
       - ExpressRoute direct provides dual 100Gbps or 10-Gbps connectivity, which supports Active/Active connectivity at scale.
 ### Security considerations
       - ExpressRoute is a private connection between your on-premises infrastructure and Azure infrastructure, so your data is not 
-        available on the public internet. This makes is secured from potential internet communication risks.
+        available on the public internet. This makes it secured from potential internet communication risks.
       - Yet, DNS queries, certificate revocation list checking, and Azure content Delivery Network requests are still sent over the public internet 
 ## Describe Azure DNS
       Azure DNS is 
@@ -646,7 +659,7 @@
       Helps you
         - to manage DNS records using the  same Azure credentials as other services
         - use the same API
-        - us the same tools
+        - use the same tools
         - billing as other Azure services
 #### Benefits of Azure DNS
       - Reliability and performance
@@ -668,12 +681,12 @@
 ##### Ease of Use
       - Azure DNS 
           - can manage records for your Azure services
-          - provides DNS for your external resources as wll
+          - provides DNS for your external resources as well
           - integrated in the Azure portal 
           - uses same credentials, support contracts, billing as your other Azure services
           - can be managed using 
               - Azure portal
-              - powershel cmdlets,
+              - powershell cmdlets,
               - cross-platform CLI
               Applications that require automated DNS management can integrate with the service by using
                 - REST API
